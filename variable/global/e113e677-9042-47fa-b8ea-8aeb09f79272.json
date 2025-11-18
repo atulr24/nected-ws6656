@@ -1,0 +1,23 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-11-18T08:48:28.156Z",
+  "updatedAt": "2025-11-18T08:48:28.156Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "e113e677-9042-47fa-b8ea-8aeb09f79272",
+  "name": "VarAddedByIU",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "asd"
+  }
+ }
+}
