@@ -1,0 +1,700 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "testedAt": "2025-11-18T06:33:58.225Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "createdAt": "2025-11-18T06:32:27.01Z",
+  "updatedAt": "2025-11-18T06:33:58.226038Z",
+  "isDeleted": false,
+  "entityId": "a08ecff3-608e-4b0d-a7ba-23853f5dec76",
+  "name": "wf1",
+  "commitId": "commit-51370b7c-de72-45d1-ac52-a00ba3fc72f1",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-18 06:32:27",
+   "timeStamp": "2025-11-18T06:32:27.010871343Z"
+  },
+  "startNode": "n_sg51aE",
+  "version": "draft",
+  "description": "",
+  "trigger": {
+   "apiNode": "1"
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 0
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "name": {
+       "executedValue": "Atul",
+       "name": "name",
+       "dataType": "string"
+      }
+     },
+     "executedValue": {
+      "name": "Atul"
+     },
+     "settings": {
+      "authType": "none",
+      "cacheKeys": "",
+      "isEnabled": true,
+      "cacheEnabled": false,
+      "durationUnit": "d",
+      "durationValue": 0
+     },
+     "nodeType": "apiTrigger",
+     "name": "Trigger",
+     "runInLoop": {
+      
+     },
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 130
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_gyAZjV",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 205
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_sg51aE",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "snippet": {
+       "value": "\"{{.Trigger.name}}\""
+      },
+      "language": {
+       "value": "JS"
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": "Atul"
+     },
+     "settings": {
+      "timeout": 10,
+      "timeoutAsync": 20,
+      "errorContinue": false
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "n_sg51aE",
+     "status": "success",
+     "name": "Code",
+     "runInLoop": {
+      
+     },
+     "blockName": "code",
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 335
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_8ZcYhg",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 410
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_otEOOa",
+    "type": "restApiNode",
+    "data": {
+     "input": {
+      "authentication": {
+       "value": "None"
+      },
+      "path": {
+       "value": "/posts/4"
+      },
+      "method": {
+       "value": "GET"
+      },
+      "baseUrl": {
+       "value": "https://jsonplaceholder.typicode.com"
+      },
+      "headers": {
+       "value": []
+      },
+      "contentType": {
+       "value": ""
+      },
+      "queryParams": {
+       "value": []
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": {
+       "Body": {
+        "title": "eum et est occaecati",
+        "userId": 1,
+        "id": 4,
+        "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+       },
+       "Headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Date": "Tue, 18 Nov 2025 06:33:00 GMT",
+        "Cf-Ray": "9a056f0f4b0cde29-DEL",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Powered-By": "Express",
+        "Server-Timing": "cfCacheStatus;desc=\"REVALIDATED\",cfEdge;dur=43,cfOrigin;dur=619",
+        "Via": "2.0 heroku-router",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "Report-To": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=W4QzSLUCG2%2F0NqhGbIirLlyXh%2FtHob5IVdEX7qr25g8%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1762031347\"}],\"max_age\":3600}",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "max-age=43200",
+        "X-Ratelimit-Limit": "1000",
+        "X-Ratelimit-Reset": "1762031353",
+        "Server": "cloudflare",
+        "X-Ratelimit-Remaining": "999",
+        "Nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+        "Etag": "W/\"10e-HqG77o1RAmatkSwR36f4+Io6g1E\"",
+        "Vary": "Origin, Accept-Encoding",
+        "Cf-Cache-Status": "REVALIDATED",
+        "Reporting-Endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=W4QzSLUCG2%2F0NqhGbIirLlyXh%2FtHob5IVdEX7qr25g8%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1762031347\"",
+        "X-Content-Type-Options": "nosniff"
+       },
+       "StatusCode": 200
+      }
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "d",
+      "timeoutAsync": 20,
+      "durationValue": 0,
+      "errorContinue": false,
+      "timeout": 10,
+      "cacheKeys": ""
+     },
+     "nodeType": "restApiNode",
+     "entity": "connector",
+     "entityId": "46ac4179-c720-4097-b6db-47d931d53044",
+     "status": "success",
+     "name": "restAPI",
+     "runInLoop": {
+      
+     },
+     "blockName": "restAPI",
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 540
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_YeJuAl",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 615
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_n6Fq7f",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "query": {
+       "value": "db.comments.find({\"name\":\"email@email.com\"})"
+      },
+      "action": {
+       "value": 0
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": [
+       {
+        "date": "2002-08-18T04:56:07Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "mercedes_tyler@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd4323",
+        "_id": "5a9427648b0beebeb69579e7",
+        "Bool": false
+       },
+       {
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "john_bishop@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd446f",
+        "_id": "5a9427648b0beebeb69579f5",
+        "Bool": false,
+        "date": "1975-01-21T00:31:22Z"
+       },
+       {
+        "_id": "5a9427648b0beebeb6957a21",
+        "Bool": false,
+        "date": "1981-11-08T04:32:25Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "tom_wlaschiha@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd516c"
+       },
+       {
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "taylor_scott@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd4eaf",
+        "_id": "5a9427648b0beebeb6957a22",
+        "Bool": false,
+        "date": "1970-11-15T05:54:02Z"
+       },
+       {
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd587d",
+        "_id": "5a9427648b0beebeb6957a38",
+        "Bool": false,
+        "date": "2012-11-26T11:00:57Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "gemma_whelan@gameofthron.es"
+       },
+       {
+        "email": "hafthór_júlíus_björnsson@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd5b9a",
+        "_id": "5a9427648b0beebeb6957a4b",
+        "Bool": false,
+        "date": "2015-02-08T01:28:23Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        }
+       },
+       {
+        "movie_id": "573a1390f29313caabcd680a",
+        "_id": "5a9427648b0beebeb6957a88",
+        "Bool": false,
+        "date": "2004-02-26T06:33:03Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "thomas_morris@fakegmail.com",
+        "Integer": "100"
+       },
+       {
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "yolanda_owen@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd6d40",
+        "_id": "5a9427648b0beebeb6957aa3",
+        "Bool": false,
+        "date": "1980-07-13T06:41:13Z"
+       },
+       {
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd6f98",
+        "_id": "5a9427648b0beebeb6957abd",
+        "Bool": false,
+        "date": "1972-04-16T14:52:53Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "john_bishop@fakegmail.com"
+       },
+       {
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd70b4",
+        "_id": "5a9427648b0beebeb6957ac8",
+        "Bool": false,
+        "date": "2007-06-27T20:27:44Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "diana_rigg@gameofthron.es"
+       }
+      ]
+     },
+     "settings": {
+      "rowLimit": 1000,
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "timeoutAsync": 20,
+      "durationValue": 5,
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "280f46b5-4e5b-4e00-a939-1e1c7bcae06f",
+     "status": "success",
+     "name": "mongodb",
+     "runInLoop": {
+      
+     },
+     "blockName": "mongodb",
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 745
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_UZf9IY",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 820
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_xjuzR0",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "key_0": {
+       "value": "Value2",
+       "executedValue": "Value2",
+       "name": "key_0",
+       "dataType": "string"
+      }
+     },
+     "executedValue": {
+      "resetOutput": {
+       
+      },
+      "error": "",
+      "output": {
+       "key_0": "Value2"
+      }
+     },
+     "settings": {
+      "errorContinue": false
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "n_xjuzR0",
+     "status": "success",
+     "name": "SetVariable",
+     "runInLoop": {
+      
+     },
+     "blockName": "setVariable",
+     "testedAt": "2025-11-18T06:33:58.225Z"
+    }
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 950
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_9H65SU",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_NMrCLJ",
+    "source": "1",
+    "target": "n_gyAZjV",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "strokeWidth": 1,
+     "stroke": "gray"
+    },
+    "id": "e_6QUnss",
+    "source": "n_sg51aE",
+    "target": "n_8ZcYhg",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_w9KM45",
+    "source": "n_gyAZjV",
+    "target": "n_sg51aE",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "strokeWidth": 1,
+     "stroke": "gray"
+    },
+    "id": "e_XO4nE2",
+    "source": "n_otEOOa",
+    "target": "n_YeJuAl",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_N3S8jE",
+    "source": "n_8ZcYhg",
+    "target": "n_otEOOa",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_n1Zpwi",
+    "source": "n_n6Fq7f",
+    "target": "n_UZf9IY",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_5DpouE",
+    "source": "n_YeJuAl",
+    "target": "n_n6Fq7f",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_ZRuY2K",
+    "source": "n_xjuzR0",
+    "target": "n_9H65SU",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_GL1lar",
+    "source": "n_UZf9IY",
+    "target": "n_xjuzR0",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false
+ }
+}
